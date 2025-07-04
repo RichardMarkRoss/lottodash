@@ -1,4 +1,3 @@
-import 'package:lottodash/components/EditProfileDialog.dart';
 import 'package:lottodash/components/LeftDraw.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
@@ -26,12 +25,26 @@ class _CounterPageState extends State<CounterPage> {
   int _counter = 0;
   int _selected = 0;
 
+  NavigationBarAlignment alignment = NavigationBarAlignment.spaceBetween;
+  bool expands = true;
+  NavigationLabelType labelType = NavigationLabelType.selected;
+  bool customButtonStyle = true;
+  bool expanded = true;
   void _incrementCounter() {
     setState(() => _counter++);
   }
 
-  NavigationItem _buildButton(String label, IconData icon) {
-    return NavigationItem(label: Text(label), child: Icon(icon));
+  NavigationItem buildButton(String label, IconData icon) {
+    return NavigationItem(
+      style: customButtonStyle
+          ? const ButtonStyle.muted(density: ButtonDensity.icon)
+          : null,
+      selectedStyle: customButtonStyle
+          ? const ButtonStyle.fixed(density: ButtonDensity.icon)
+          : null,
+      label: Text(label),
+      child: Icon(icon),
+    );
   }
 
   @override
@@ -74,7 +87,7 @@ class _CounterPageState extends State<CounterPage> {
                     position: OverlayPosition.right,
                   );
                 },
-                child: const Icon(RadixIcons.dashboard),
+                child: const Icon(LucideIcons.user),
               ),
               OutlineButton(
                 density: ButtonDensity.icon,
@@ -86,17 +99,22 @@ class _CounterPageState extends State<CounterPage> {
         ),
       ],
       footers: [
+        const Divider(),
         NavigationBar(
-          onSelected: (i) {
+          alignment: alignment,
+          labelType: labelType,
+          expanded: expanded,
+          expands: expands,
+          onSelected: (index) {
             setState(() {
-              _selected = i;
+              _selected = index;
             });
           },
           index: _selected,
           children: [
-            _buildButton('Home', Icons.home),
-            _buildButton('Explore', Icons.explore),
-            _buildButton('Library', Icons.library_music),
+            buildButton('Lotto', BootstrapIcons.icon1Circle),
+            buildButton('Powerball', BootstrapIcons.icon2Circle),
+            buildButton('Daily', BootstrapIcons.icon3Circle),
           ],
         ),
       ],

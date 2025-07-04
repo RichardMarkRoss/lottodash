@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "409525565675",
+    "project_id": "leaplottoza",
+    "storage_bucket": "leaplottoza.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409525565675:android:fcd7e01d506fc9ba9ea6ae",
+        "android_client_info": {
+          "package_name": "com.company.lottodash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0m6WJhplsG_t1Qje4nr5q2iksb8Q025U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409525565675:android:64a9ce4e6fdc69e49ea6ae",
+        "android_client_info": {
+          "package_name": "com.example.lottodash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0m6WJhplsG_t1Qje4nr5q2iksb8Q025U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409525565675:android:5eba3e8ba7f124cd9ea6ae",
+        "android_client_info": {
+          "package_name": "com.example.lottoleapza"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0m6WJhplsG_t1Qje4nr5q2iksb8Q025U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
